@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+ {% block content %}
+   <h1>you are now on the login page</h1> 
+   <form class='site' action="{% url 'accounts:log' %}" method="post">
+   <!--must use a single quote in the action and double quote in the method  -->
+      {% csrf_token %}
+       {{form}}
+      {% if request.GET.next %}<!-- if next parameter is there in the url then we will redirect the user to create page-->
+        <input type="hidden" name="next" value="{{request.GET.next}}">
+   <!-- this 'value=""'-- will be sent as a post request to the log page-->
+      {% endif %}
+    <input type="submit" value="login">
+   </form>
+ {% endblock %}
+
+
+

@@ -1,0 +1,132 @@
+{% load static %}
+<html>
+<head>
+<title>hello</title>
+</head>
+ <link rel="stylesheet" href="{% static 'main2.css' %}" type="text/css" />
+
+<body id="body">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="{% static 'main2.js' %}"></script> <!-- This is how to include a static file -->
+<meta name="viewport" content="width-device-width" initial-scale=1>
+<header>
+  <!-- <img class="image" src="Seabrook_Christian_School_logo.png" alt="logo"/>
+   <div class="main"><h1>krishna school</h1></div>-->
+
+<nav>
+  <img src="{% static 'Seabrook_Christian_School_logo.png' %}" class="image22" />  
+  <ul>
+    <li><a href="{% url 'arti:create' %}">create article</a>
+      <ul class="drop-menu menu-#{i}">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+        <li>cuatro</li>
+      </ul>
+    </li>
+    <li><a href="/about/">about</a>
+      <ul class="drop-menu menu-#{i}">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+      </ul>
+    </li>
+    <li>style 3
+      <ul class="drop-menu menu-#{i}">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+      </ul>
+    </li>
+    <li>style 4
+      <ul class="drop-menu menu-#{i}">
+        <li>uno</li>
+        <li>dos</li>
+        <li>tres</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  <dev class="name1">
+     <img src="{% static 'the-archer-school-for-girls-p101217-2-520x250.jpg' %}" class="name2" alt="image"/>
+  </div>
+  <div class="articles" style="border:2px solid black;background-color:red;">
+    {%for artic in article %}          <!-- syntax for writing the python code in it -->
+       <div style="background-color:pink;">
+         <h2><a href="http://www.google.com">{{artic.title}}</a></h2>
+         <img src="{{ artic.thumb.url}}" height="200px" width="300px"/>
+         <p>{{artic.body}}</p>
+         <p>{{artic.date}}</p>
+       </div>
+    {% endfor%}
+  </div>
+  <!-- navigation buttons
+   <button class="button" href="http://www.google.com">contact</button>
+   <button class="button" href="http://www.google.com">About</button>
+   <button class="button" href="http://www.google.com">Students</button>
+   <button class="button" href="http://www.google.com">Home</button>
+   <form id="form" action="arpi.html" method="POST" onsubmit="return checkinfo();">
+      login Id:<input id="make1" type="text" name="login"/>
+      password:<input id="make2" type="password" name="password"/>
+      <input type="submit" value="submit"/>
+   </form>
+</div>
+</header>-->
+</header>
+<!--
+rotate buttons
+<section>
+      <div class="sec">
+<div class="trigger">
+  <div class="box"></div>
+</div>
+<div class="trigger">
+<div class="box">
+</div>
+</div>
+<div class="trigger">
+<div class="box">
+</div>
+</div>
+<div class="trigger">
+<div class="box">
+</div>
+      </div>
+ </div>
+</section>-->
+<div class="load"></div>
+  <!--image slider
+  <div>
+     <img src="beautiful-wallpaper-39.jpg" id="image2"/>
+  </div>-->
+  <!--
+   <div class="slidercontainer">
+        <div class="showSlide">
+            <img src="beautiful-wallpaper-39.jpg" />
+            <div class="content">Slide1 heading</div>
+        </div>
+        <div class="showSlide">
+            <img src="Screenshot from 2018-01-07 10-54-57.png" />
+            <div class="content">Slide2 heading</div>
+        </div>
+
+        <div class="showSlide">
+            <img src="Seabrook_Christian_School_logo.png" />
+            <div class="content">Slide3 heading</div>
+        </div>
+        <div class="showSlide">
+            <img src="IMG-20160507-WA0022.jpg" />
+            <div class="content">Slide4 heading</div>
+        </div>
+
+        <a class="left" onclick="nextSlide(-1)">lmklinllk</a>
+        <a class="right" onclick="nextSlide(1)">klnlknlkn</a>
+    </div>-->
+
+<!--<footer>
+<div class="foot">
+ <p>&copy; copyright to arpit varshney</p>
+</div>
+</footer>-->
+</body>
+</html>

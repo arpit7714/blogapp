@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{%block content%}
+   <div class="create">
+    <h2>create a new awsome article</h2>
+    <form class="site-form" action='/create/' method="post" enctype="multipart/form-data"> <!--now we sending our data to this url(arti(app name) create(name of the url)) via post request
+this enctype is used here because we are uploading an image 
+-->
+          {%csrf_token%}
+          {{form}}
+        <input type="submit" value="create2">
+     </form>
+   </div>
+   
+{% endblock %}

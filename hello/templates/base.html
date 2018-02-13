@@ -1,0 +1,24 @@
+<html>
+<head>
+ <title>new webpage</title>
+</head>
+<body style="background-color:light-blue;">
+  <h1>this is my very first webpage</h1>
+  <p>now i am going to talk little about this webpage in context without the reference of anyone and without the interference of everyone</p>
+<nav>
+   {%if user.is_authenticated %}<!--it will show the logout only when the user is authenticated-->
+	<form class='select' action="{% url 'accounts:log2' %}" method="post"> 
+	  <!-- whenever we want to sent the post request we need to add the csrf token for the security purposes-->
+	   {%csrf_token%}
+	   <button type="submit">logout</button>
+	</form>
+        <a href="{% url 'arti:create' %}">new article</a>
+    {% else %}
+        <a href="{% url 'accounts:log'%}">login</a>
+        <a href="{% url 'accounts:signup'%}">signup</a>
+    {% endif %}   
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>

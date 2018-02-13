@@ -1,0 +1,27 @@
+{% load static from staticfiles %}
+<html>
+<head>
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'main.css' %}" type="text/css" />
+ <script src="{% static 'main.js' %}"></script> <!-- This is how to include a static file -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<div class="sky">
+  <img src="{% static 'cloud1.jpeg' %}" class="cloud"/>
+  <img src="{% static 'cloud1.jpeg' %}" class="cloud"/>
+</div>
+<div id="box1">
+   <button class="button">burj khalifa</button>
+</div>	
+<section>
+  <div class="main">
+    <h2 id="h2" onclick="change();">burj khalifa</h2>
+     <p>
+        The Burj Khalifa (Arabic: برج خليفة‎, Arabic for "Khalifa Tower"; pronounced English: /ˈbɜːrdʒ kəˈliːfə/), known as the Burj Dubai before its inauguration, is a megatall skyscraper in Dubai, United Arab Emirates. With a total height of 829.8 m (2,722 ft) and a roof height (excluding antenna) of 828 m (2,717 ft), the Burj Khalifa has been the tallest structure in the world since its topping out in late 2008.[4][9]
+
+Construction of the Burj Khalifa began in 2004, with the exterior completed five years later in 2009. The primary structure is reinforced concrete. The building was opened in 2010 as part of a new development called Downtown Dubai. It is designed to be the centrepiece of large-scale, mixed-use development. The decision to construct the building is reportedly based on the government's decision to diversify from an oil-based economy, and for Dubai to gain international recognition. The building was originally named Burj Dubai but was renamed in honour of the ruler of Abu Dhabi and president of the United Arab Emirates, Khalifa bin Zayed Al Nahyan;[3] Abu Dhabi and the UAE government lent Dubai money to pay its debts. The building broke numerous height records, including its designation as the tallest tower in the world.
+     </p>
+  </div>
+</section>
+</body>
+</html
